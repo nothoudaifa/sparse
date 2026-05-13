@@ -61,7 +61,7 @@ void sparse_multiply(
             // values[j] is the value of the column, but j is not the index of the column, the index is stored in col_indices
             y[i] += values[j] * x[col_indices[j]];
         }
-        // if the result is zero we increment out_nnz
+        // if the result is non zero we increment out_nnz
         if (y[i] != 0) {
             (*out_nnz)++;
         }
