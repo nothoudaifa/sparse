@@ -62,7 +62,7 @@ void sparse_multiply(
             y[i] += values[j] * x[col_indices[j]];
         }
         // if the result is zero we increment out_nnz
-        if (y[i] == 0) {
+        if (y[i] != 0) {
             (*out_nnz)++;
         }
     }
